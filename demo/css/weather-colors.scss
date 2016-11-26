@@ -1,0 +1,58 @@
+$font-stack:    Helvetica, sans-serif;
+
+$winter-color-1: #00275A;
+$winter-color-2: #93add6;
+$winter-color-3: #84baea;
+$winter-color-4: #488cd8;
+$winter-color-5: #0d53a7;
+
+$rainy-color-1: #d8e3e9;
+$rainy-color-2: #788589;
+$rainy-color-3: #7b8b8a;
+$rainy-color-4: #e7e7e7;
+$rainy-color-5: #aba69f;
+
+body {
+  font: 100% $font-stack;
+  
+}
+
+.winter-snowing-1 {
+	background-color: $winter-color-1;
+}
+
+.winter-snowing-2 {
+	background-color: $winter-color-2;
+}
+
+.winter-snowing-3 {
+	background-color: $winter-color-3;
+}
+
+.winter-snowing-4 {
+	background-color: $winter-color-4;
+}
+
+.winter-snowing-5 {
+	background-color: $winter-color-5;
+}
+
+.rainy-colors-1 {
+	background-color: $rainy-color-1;
+}
+
+.rainy-colors-2 {
+	background-color: $rainy-color-2;
+}
+
+.rainy-colors-3 {
+	background-color: $rainy-color-3;
+}
+
+.rainy-colors-4 {
+	background-color: $rainy-color-4;
+}
+
+.rainy-colors-5 {
+	background-color: $rainy-color-5;
+}

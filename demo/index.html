@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>weather-color demo</title>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<link rel=stylesheet href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel=stylesheet href="css/demo.css">
+	<link rel=stylesheet href="css/weather-colors.css">
+	<script type="text/javascript">
+		
+		
+		$(document).ready(function() {
+			var backgroundInterval = setInterval(function(){
+		    
+			/* WINTER SNOWING COLORS */
+		    $("#winter-snowing-1").toggleClass("winter-snowing-1");
+		    $("#winter-snowing-2").toggleClass("winter-snowing-2");
+		    $("#winter-snowing-3").toggleClass("winter-snowing-3");
+		    $("#winter-snowing-4").toggleClass("winter-snowing-4");
+		    $("#winter-snowing-5").toggleClass("winter-snowing-5");
+
+		    /* RAINY COLORS */
+		    $("#rainy-colors-1").toggleClass("rainy-colors-1");
+		    $("#rainy-colors-2").toggleClass("rainy-colors-2");
+		    $("#rainy-colors-3").toggleClass("rainy-colors-3");
+		    $("#rainy-colors-4").toggleClass("rainy-colors-4");
+		    $("#rainy-colors-5").toggleClass("rainy-colors-5");
+		 	},2500)
+		});
+		
+	</script>
+</head>
+<body>
+	<div class="row">
+		<div id="winter-snowing-1" class="col-lg-12"></div>
+		<div id="winter-snowing-2" class="col-lg-12"></div>
+		<div id="winter-snowing-3" class="col-lg-12"></div>
+		<div id="winter-snowing-4" class="col-lg-12"></div>
+		<div id="winter-snowing-5" class="col-lg-12"></div>
+	</div>
+	<div class="row">
+		<div id="rainy-colors-1" class="col-lg-12"></div>
+		<div id="rainy-colors-2" class="col-lg-12"></div>
+		<div id="rainy-colors-3" class="col-lg-12"></div>
+		<div id="rainy-colors-4" class="col-lg-12"></div>
+		<div id="rainy-colors-5" class="col-lg-12"></div>
+	</div>
+</body>
+</html>
