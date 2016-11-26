@@ -22,6 +22,7 @@ seasons = [('winter', (date(Y,  1,  1),  date(Y,  3, 20))),
 respone = request.json()
 created = respone['query']['created']
 text = respone['query']['results']['channel']['item']['condition']['text']
+#print text
 temp = respone['query']['results']['channel']['item']['condition']['temp']
 
 # Dictionary for the results provided by API
@@ -38,8 +39,8 @@ summerColors = {'color1' : '#16E811', 'color2' : '#13FF52', 'color3' : '#73FF20'
 springColors = {'color1' : '#2FFF9D', 'color2' : '#FFEA55', 'color3' : '#96FF98', 'color4' : '#50909C', 'color5' : '#E5AD4A'}
 
 rainyColors = {'color1' : '#d8e3e9', 'color2' : '#788589', 'color3' : '#7b8b8a', 'color4' : '#e7e7e7', 'color5' : '#aba69f'}
-snowingColors = {'color1' : '#ececf4', 'color2' : '#93add6', 'color3' : '#84baea', 'color4' : '#488cd8', 'color5' : '#0d53a7' }
-cloudyColors = {'color1' : '#9c6c3a', 'color2' : '#1f221e', 'color3', '#9da5ab', 'color4' : '#4c4b06'}
+snowingColors = {'color1' : '#ececf4', 'color2' : '#93add6', 'color3' : '#84baea', 'color4' : '#488cd8', 'color5' : '#0d53a7'}
+cloudyColors = {'color1' : '#9c6c3a', 'color2' : '#1f221e', 'color3' : '#9da5ab', 'color4' : '#4c4b06'}
 
 # for keys,values in result.items():
 #     print(keys)
@@ -53,9 +54,9 @@ def get_season(now):
                 if start <= now <= end)
 
 def createColors (result):
-	global random
-	random = random.choice(winterColors.values())
-	return random
+  global random
+  random = random.choice(winterColors.values())
+  return random
 
 def getColorForSeason (season):
   if season == "autumn":
@@ -68,11 +69,15 @@ def getColorForSeason (season):
     seasonColor = springColors
   return seasonColor
 
-
-#createColorsForWeather (result)
+def getColorForWeather(text):
+  if text == "Mostly Cloudy":
+    weatherColor = cloudyColors
+    print weatherColor
 
 currentSeason = get_season(date.today())
 
 #print currentSeason
 
-print (getColorForSeason(currentSeason))
+#print (getColorForSeason(currentSeason))
+
+print (getColorForWeather(text))
