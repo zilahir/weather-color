@@ -48,12 +48,27 @@ def get_season(now):
     return next(season for season, (start, end) in seasons
                 if start <= now <= end)
 
-def createColorsForWeather (result):
+def createColors (result):
 	global random
 	random = random.choice(winterColors.values())
-	print random
+	return random
+
+def getColorForSeason (season):
+  if season == "autumn":
+    seasonColor = autumnColors
+  elif season == "winter":
+    seasonColor = winterColors
+  elif season == "summer":
+    seasonColor = summerColors
+  elif season == "spring":
+    seasonColor = springColors
+  return seasonColor
 
 
 #createColorsForWeather (result)
 
-print(get_season(date.today()))
+currentSeason = get_season(date.today())
+
+#print currentSeason
+
+print (getColorForSeason(currentSeason))
