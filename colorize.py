@@ -3,6 +3,7 @@
 import requests
 import random
 from datetime import date, datetime
+import matplotlib.colors as colors
 
 url = "https://query.yahooapis.com/v1/public/yql?q=select%20item.condition%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22budapest%2C%20hu%22)%20and%20u%3D'c'&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys"
 
@@ -74,6 +75,10 @@ def getColorForWeather(text):
     weatherColor = cloudyColors
     print weatherColor
 
+def hex_to_rgb(hex_string):
+  rgb = colors.hex2color(hex_string)
+  return tuple([int(255*x) for x in rgb])
+
 currentSeason = get_season(date.today())
 
 #print currentSeason
@@ -81,3 +86,5 @@ currentSeason = get_season(date.today())
 #print (getColorForSeason(currentSeason))
 
 print (getColorForWeather(text))
+
+#print (hex_to_rgb("#d8e3e9"))
