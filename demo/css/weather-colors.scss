@@ -11,10 +11,19 @@ $rainy-color-2: #788589;
 $rainy-color-3: #7b8b8a;
 $rainy-color-4: #e7e7e7;
 $rainy-color-5: #aba69f;
+$color-text: #fff;
 
 body {
   font: 100% $font-stack;
   
+}
+
+.color-name {
+	color: $color-text;
+	float: right;
+	font-size: 30px;
+	margin-top: 30px;
+	opacity: 0.6;
 }
 
 .winter-snowing-1 {

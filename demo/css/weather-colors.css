@@ -1,6 +1,13 @@
 body {
   font: 100% Helvetica, sans-serif; }
 
+.color-name {
+  color: #fff;
+  float: right;
+  font-size: 30px;
+  margin-top: 30px;
+  opacity: 0.6; }
+
 .winter-snowing-1 {
   background-color: #00275A; }
 
