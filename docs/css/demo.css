@@ -18,3 +18,7 @@ div#rainy-colors-1, div#rainy-colors-2, div#rainy-colors-3, div#rainy-colors-4, 
 .hidden {
 	display: none;
 }
+
+h3:hover {
+	cursor: pointer;
+}
