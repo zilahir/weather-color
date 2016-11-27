@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>weather-color demo</title>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<link rel=stylesheet href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel=stylesheet href="css/demo.css">
+	<link rel=stylesheet href="css/weather-colors.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
+	<script type="text/javascript">
+		
+		
+		$(document).ready(function() {
+			var backgroundInterval = setInterval(function(){
+		    
+			/* WINTER SNOWING COLORS */
+		    $("#winter-snowing-1").toggleClass("winter-snowing-1");
+		    $("#winter-snowing-2").toggleClass("winter-snowing-2");
+		    $("#winter-snowing-3").toggleClass("winter-snowing-3");
+		    $("#winter-snowing-4").toggleClass("winter-snowing-4");
+		    $("#winter-snowing-5").toggleClass("winter-snowing-5");
+
+		    /* RAINY COLORS */
+		    $("#rainy-colors-1").toggleClass("rainy-colors-1");
+		    $("#rainy-colors-2").toggleClass("rainy-colors-2");
+		    $("#rainy-colors-3").toggleClass("rainy-colors-3");
+		    $("#rainy-colors-4").toggleClass("rainy-colors-4");
+		    $("#rainy-colors-5").toggleClass("rainy-colors-5");
+		 	},2500)
+		 	$("#winter-open").click(function (e) {
+		        e.preventDefault();
+		        $("#winter-container").toggleClass("hidden");
+		        $("#winter-open").toggleClass("fa-angle-down");
+		    });
+		    $("#rainy-open").click(function (e) {
+		        e.preventDefault();
+		        $("#rainy-container").toggleClass("hidden");
+		        $("#rainy-open").toggleClass("fa-angle-down");
+		    });
+		});
+		
+	</script>
+</head>
+<body>	
+	<div class="container-fluid">
+	<h3>Winter snowing colors <i id="winter-open" class="fa fa-angle-up"></i></h3>
+	<div id="winter-container" class="row hidden">
+		
+		<div id="winter-snowing-1" class="col-lg-12">
+			<p class="color-name">#1</p>
+		</div>
+		<div id="winter-snowing-2" class="col-lg-12">
+			<p class="color-name">#2</p>
+		</div>
+		<div id="winter-snowing-3" class="col-lg-12">
+			<p class="color-name">#3</p>
+		</div>
+		<div id="winter-snowing-4" class="col-lg-12">
+			<p class="color-name">#4</p>
+		</div>
+		<div id="winter-snowing-5" class="col-lg-12">
+			<p class="color-name">#5</p>
+		</div>
+	</div>
+	<h3>Rainy colors <i id="rainy-open" class="fa fa-angle-up"></i></h3>
+	<div id="rainy-container" class="row hidden">	
+		<div id="rainy-colors-1" class="col-lg-12">
+			<p class="color-name">#1</p>
+		</div>
+		<div id="rainy-colors-2" class="col-lg-12">
+			<p class="color-name">#2</p>
+		</div>
+		<div id="rainy-colors-3" class="col-lg-12">
+			<p class="color-name">#3</p>
+		</div>
+		<div id="rainy-colors-4" class="col-lg-12">
+			<p class="color-name">#4</p>
+		</div>
+		<div id="rainy-colors-5" class="col-lg-12">
+			<p class="color-name">#5</p>
+		</div>
+	</div>
+	</div>
+</body>
+</html>

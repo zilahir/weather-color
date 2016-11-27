@@ -1,0 +1,20 @@
+/* weatherc-color
+demo-css */
+
+.display-weather {
+	-webkit-transition: background 1.0s ease-in-out;
+	-ms-transition:     background 1.0s ease-in-out;
+	transition:         background 1.0s ease-in-out;
+}
+
+div#winter-snowing-1, div#winter-snowing-2, div#winter-snowing-3, div#winter-snowing-4, div#winter-snowing-5,
+div#rainy-colors-1, div#rainy-colors-2, div#rainy-colors-3, div#rainy-colors-4, div#rainy-colors-5 {
+	height: 100px;
+	-webkit-transition: background 1.0s ease-in-out;
+	-ms-transition:     background 1.0s ease-in-out;
+	transition:         background 1.0s ease-in-out;
+}
+
+.hidden {
+	display: none;
+}
